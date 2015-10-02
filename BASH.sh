@@ -2,7 +2,7 @@
 #Author Sarath Babu
 
 #rename multiple files in UNIX
-rename 's/^fgh/jkl/' fgh*
+rename 's/^regex or string/change text/' filename
 
 #find the count of a particular column 
 #-d is the seperator, -f n is the column number
