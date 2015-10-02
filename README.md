@@ -1,4 +1,1 @@
-# Misc
-#Author Sarath Babu
-
-#This folder has all the miscellaneous short snippets used in BASH,Perl, Python and R scripts
+This folder has all the miscellaneous short snippets used in BASH,Perl, Python and R scripts
