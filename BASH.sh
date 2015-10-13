@@ -22,4 +22,7 @@ comm -23 a b
 comm -13 a b
 
 #Show lines that only exist in one file or the other: (but not both)
-comm -3 a b
+comm -3 a b | sed 's/^\t//'
+
+#Remove first line from a file
+sed 's/^\t//' a
