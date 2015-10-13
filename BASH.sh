@@ -1,8 +1,17 @@
 #10/02/2015
 #Author Sarath Babu
 
+#Setting up alias
+alias go="cd /xxx/yyy"
+
+#Variable in Alias is not possible but a small function can be written
+function go { cd "/data6/$1" ;}
+export -f go
+
+
 #rename multiple files in UNIX
 rename 's/^regex or string/change text/' filename
+
 
 #find the count of a particular column 
 #-d is the seperator, -f n is the column number
