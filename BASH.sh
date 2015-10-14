@@ -5,7 +5,7 @@
 alias go="cd /xxx/yyy"
 
 #Variable in Alias is not possible but a small function can be written
-function go { cd "/data6/$1" ;}
+function go { cd "/xxx/$1" ;}
 export -f go
 
 #To run a script in the background and redirect the output to a file
