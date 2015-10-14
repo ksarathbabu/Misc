@@ -8,6 +8,8 @@ alias go="cd /xxx/yyy"
 function go { cd "/data6/$1" ;}
 export -f go
 
+#To run a script in the background and redirect the output to a file
+nohup script >output 2>&1 &
 
 #rename multiple files in UNIX
 rename 's/^regex or string/change text/' filename
