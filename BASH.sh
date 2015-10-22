@@ -37,3 +37,6 @@ comm -3 a b | sed 's/^\t//'
 
 #Remove first line from a file
 sed 's/^\t//' a
+
+#Remove the last match - in a line
+sed 's/\(.*\)-/\1/'
