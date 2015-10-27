@@ -21,6 +21,10 @@ cut -d "" -f n filename | sort | uniq -c
 #Using cut with tab as delimiter
 cut -d$'\t' -f3,5 filename
 
+#modify a single column using awk
+awk -F "\t" ' BEGIN{OFS="\t"} { if($n !~ "^regex") {split($n, a, "delimiter"); $n=a[1]":"a[2];}  print $0}' input >output
+
+
 
 #Comparing two files after sorting 
 diff <(sort file1) <(sort file2)
