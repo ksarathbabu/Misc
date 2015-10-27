@@ -14,6 +14,12 @@ nohup script >output 2>&1 &
 #rename multiple files in UNIX
 rename 's/^regex or string/change text/' filename
 
+#read a file line by line in bash
+#!/bin/bash
+while IFS='' read -r line || [[ -n "$line" ]]; do
+    echo "Text read from file: $line"
+done < "$1"
+
 
 #find the count of a particular column 
 #-d is the seperator, -f n is the column number
