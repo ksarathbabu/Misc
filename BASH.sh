@@ -51,3 +51,12 @@ sed 's/^\t//' a
 
 #Remove the last match - in a line
 sed 's/\(.*\)-/\1/'
+
+
+# To run scripts parallel   
+alias parallel='parallel --gnu --no-notice --verbose --delay 1.0 --eta --progress --workdir $PWD'
+
+cat inputfile | parallel -j 12 "./script.sh {} "
+
+
+
