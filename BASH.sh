@@ -2,11 +2,11 @@
 #Author Sarath Babu
 
 #Setting up alias
-alias go="cd /xxx/yyy"
+alias po="cd /xxx/yyy"
 
 #Variable in Alias is not possible but a small function can be written
-function go { cd "/xxx/$1" ;}
-export -f go
+function po { cd "/xxx/$1" ;}
+export -f po
 
 #To run a script in the background and redirect the output to a file
 nohup script >output 2>&1 &
