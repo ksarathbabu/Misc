@@ -20,6 +20,14 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
     echo "Text read from file: $line"
 done < "$1"
 
+#Create a list of all possible combination from 2 columns
+    for a in $(awk '{print $1}' filename) 
+    do 
+        for b in $(awk '{print $2}' filename) 
+        do 
+            echo $a $b 
+        done 
+    done
 
 #find the count of a particular column 
 #-d is the seperator, -f n is the column number
