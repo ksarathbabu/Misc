@@ -42,7 +42,7 @@ cut -d "" -f n filename | sort | uniq -c
 cut -d$'\t' -f3,5 filename
 
 #modify a single column using awk
-awk -F "\t" ' BEGIN{OFS="\t"} { if($n !~ "^regex") {split($n, a, "delimiter"); $n=a[1]":"a[2];}  print $0}' input >output
+awk 'BEGIN{FS=OFS="\t"} { if($n !~ "^regex") {split($n, a, "delimiter"); $n=a[1]":"a[2];}  print $0}' input >output
 
 #Sort file 2 based on the order of file 1 using awk (Important condition is column 1 should match)
 awk -F' ' 'NR==FNR{c[$1]++;next};c[$1] > 0' file1 file2 >output
