@@ -35,6 +35,9 @@ awk -F"\t" 'NR==FNR{a[$1$2]=$0;next;}a[$1$2]{$0=a[$1$2]}1'  comut_sample_input.t
 #For loop and if loop in awk
 awk -F" " '{for(i=1;i<=NF;i++) { if ( $i ~ //) print $i }}' input.txt
 
+#sum the values of a particular column
+cat file.txt | awk '{ sum+=$1} END {print sum}'
+
 #find the count of a particular column 
 #-d is the seperator, -f n is the column number
 cut -d "" -f n filename | sort | uniq -c
